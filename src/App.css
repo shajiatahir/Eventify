@@ -132,41 +132,28 @@ footer {
   vertical-align: middle;
 }
 
-/* Contact Section */
-#contact {
-  padding-top: 6rem; /* Increased top padding */
-  padding-bottom: 6rem; /* Increased bottom padding */
-  background-color: #212529; /* Keep dark background */
+/* Styles for Contact Section */
+#contact .container {
+  max-width: 800px; /* Limit the width of the container for better readability */
 }
 
 #contact h2 {
-  margin-bottom: 3rem; /* Increased bottom margin for heading */
+  color: #e9ecef; /* Lighter color for the heading */
 }
 
-#contact .list-unstyled li {
-  margin-bottom: 1rem; /* Space between list items */
-  font-size: 1.1rem; /* Slightly larger font size */
+#contact .lead {
+  color: #ced4da; /* Lighter color for lead text */
 }
 
-#contact .list-unstyled li i {
-  font-size: 1.3rem; /* Slightly larger icon size */
-  vertical-align: middle; /* Align icon vertically */
+#contact .row .col-md-6 p {
+  font-size: 1.1rem; /* Slightly larger font for contact details */
 }
 
-#contact a {
+#contact .list-unstyled a {
   text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change on hover */
 }
 
-#contact a:hover {
-  color: #cccccc !important; /* Lighter color on hover */
-}
-
-#contact p {
-  font-size: 1.1rem; /* Consistent font size for phone number */
-  margin-top: 2rem; /* More space above phone number */
-}
-
-#contact .d-flex a {
-    margin: 0 15px; /* Increase space between horizontal social links */
+#contact .list-unstyled a:hover {
+  color: #adb5bd !important; /* Slightly lighter color on hover */
 }

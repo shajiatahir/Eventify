@@ -253,18 +253,25 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="bg-dark text-white py-5">
         <div className="container">
-          <h2 className="text-center fw-bold mb-4">Contact Us</h2>
+          <h2 className="text-center fw-bold mb-5">Contact Us</h2>
           <div className="row justify-content-center">
-            <div className="col-md-8">
-              <div className="d-flex justify-content-center mb-3">
-                <a href="#" className="text-white mx-2"><i className="bi bi-facebook me-1"></i>pakistan_eventify</a>
-                <a href="#" className="text-white mx-2"><i className="bi bi-instagram me-1"></i>pakistan_eventify</a>
-                <a href="#" className="text-white mx-2"><i className="bi bi-twitter me-1"></i>pakistan_eventify</a>
+            <div className="col-md-10 col-lg-8">
+              <div className="text-center mb-4">
+                <p className="lead mb-4">Connect with us through our social media or contact us directly.</p>
+                <div className="d-flex justify-content-center mb-4">
+                  <a href="#" className="text-white mx-3 fs-4"><i className="bi bi-facebook"></i></a>
+                  <a href="#" className="text-white mx-3 fs-4"><i className="bi bi-instagram"></i></a>
+                  <a href="#" className="text-white mx-3 fs-4"><i className="bi bi-twitter"></i></a>
+                </div>
               </div>
-              <ul className="list-unstyled text-center">
-                <li className="mb-2"><i className="bi bi-envelope me-2"></i>Email: <a href="#" className="text-white">pakistan_eventify</a></li>
-              </ul>
-              <p className="text-center mt-3 mb-0">Contact Number: +1 123 456 7890</p>
+              <div className="row">
+                <div className="col-md-6 text-center text-md-end mb-3 mb-md-0">
+                  <p className="mb-0"><i className="bi bi-envelope me-2"></i>Email: pakistan_eventify</p>
+                </div>
+                <div className="col-md-6 text-center text-md-start">
+                  <p className="mb-0"><i className="bi bi-telephone me-2"></i>Contact: +1 123 456 7890</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
