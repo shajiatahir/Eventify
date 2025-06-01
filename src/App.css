@@ -1,38 +1,172 @@
+body {
+  background-color: #f8f9fa;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding-top: 70px; /* Add padding to the top of the app to account for the fixed navbar */
+}
+
+.card {
+  border-radius: 1rem;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+section {
+  margin-bottom: 0;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.transparent-navbar {
+  position: absolute; /* Position the navbar over the hero image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensure navbar is above the hero image */
+  background-color: transparent !important; /* Make the background transparent */
+}
+
+.hero-section {
+  height: 60vh; /* Adjust height as needed */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-size: cover; /* Ensure image covers the section */
+  background-repeat: no-repeat; /* Prevent image tiling */
+  background-position: center center; /* Center the background image */
+  transition: background-image 0.5s ease-in-out; /* Optional: Add transition for smoother changes */
+  margin-top: -70px; /* Pull the hero section up to the top behind the navbar */
+  display: flex; /* Keep flexbox for centering content */
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Overlay for text visibility */
+  z-index: 2; /* Ensure overlay is below text but above background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay .container {
+  z-index: 3; /* Ensure container is above overlay */
+  padding-top: 3rem; /* Add vertical padding */
+  padding-bottom: 3rem; /* Add vertical padding */
+}
+
+.hero-overlay h1 {
+  font-size: 3.5rem; /* Slightly larger font for the main title */
+  margin-bottom: 1rem;
+  color: white; /* White text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for readability */
+}
+
+.hero-overlay .lead {
+  font-size: 1.3rem; /* Slightly larger font for the lead text */
+  color: white; /* White text color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add text shadow for readability */
+}
+
+.hero-overlay .btn {
+  margin-top: 2rem; /* Increased top margin for the button */
+}
+
+.card-subtitle i {
+  vertical-align: middle;
+}
+
+/* Removed hero-arrow styles as they are not needed for automatic slider */
+/*
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
   color: white;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.hero-arrow.left {
+  left: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-arrow.right {
+  right: 15px;
+}
+*/
+
+/* Add styles for event card images */
+.card-img-top {
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure the image covers the area without distorting aspect ratio */
+}
+
+.custom-navbar-bg {
+  background-color: rgba(0, 0, 0, 0.486) !important; /* Use !important to ensure override Bootstrap */
+}
+
+.navbar-logo {
+  height: 40px; /* Adjust height as needed */
+  vertical-align: middle;
+}
+
+/* Contact Section */
+#contact {
+  padding-top: 6rem; /* Increased top padding */
+  padding-bottom: 6rem; /* Increased bottom padding */
+  background-color: #212529; /* Keep dark background */
+}
+
+#contact h2 {
+  margin-bottom: 3rem; /* Increased bottom margin for heading */
+}
+
+#contact .list-unstyled li {
+  margin-bottom: 1rem; /* Space between list items */
+  font-size: 1.1rem; /* Slightly larger font size */
+}
+
+#contact .list-unstyled li i {
+  font-size: 1.3rem; /* Slightly larger icon size */
+  vertical-align: middle; /* Align icon vertically */
+}
+
+#contact a {
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+#contact a:hover {
+  color: #cccccc !important; /* Lighter color on hover */
+}
+
+#contact p {
+  font-size: 1.1rem; /* Consistent font size for phone number */
+  margin-top: 2rem; /* More space above phone number */
+}
+
+#contact .d-flex a {
+    margin: 0 15px; /* Increase space between horizontal social links */
 }
