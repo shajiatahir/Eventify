@@ -115,9 +115,9 @@ const dummyEvents = [
 
 // Array of background images for the hero section
 const heroImages = [
-  '/image1.jpg',
-  '/image2.jpg',
-  '/image3.jpg',
+  `${process.env.PUBLIC_URL}/image1.jpg`,
+  `${process.env.PUBLIC_URL}/image2.jpg`,
+  `${process.env.PUBLIC_URL}/image3.jpg`,
 ];
 
 function App() {
@@ -164,7 +164,7 @@ function App() {
       <nav className="navbar navbar-expand-lg navbar-dark transparent-navbar">
         <div className="container">
           <a className="navbar-brand" href="#">
-            <img src="/logo.png" alt="Eventify Logo" className="navbar-logo me-2" />
+            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Eventify Logo" className="navbar-logo me-2" />
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -229,7 +229,7 @@ function App() {
               filteredEvents.map(event => (
                 <div className="col-md-6 col-lg-4 mb-4" key={event.id}>
                   <div className="card h-100 shadow-sm">
-                     <img src={event.image} className="card-img-top" alt={event.name} />
+                     <img src={`${process.env.PUBLIC_URL}${event.image}`} className="card-img-top" alt={event.name} />
                     <div className="card-body d-flex flex-column">
                       <h5 className="card-title fw-bold">{event.name}</h5>
                       <h6 className="card-subtitle mb-2 text-muted">
